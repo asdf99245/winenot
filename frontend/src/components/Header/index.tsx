@@ -1,23 +1,16 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import styled from 'styled-components';
-import Avatar from '../common/Avatar';
-import IconButton from '../common/IconButton';
 
 function Header() {
   return (
     <Container>
       <nav>
-        <Logo>
-          <Image src='/icons/logo.svg' alt='로고' fill />
-        </Logo>
-        <Menus>
-          <li>
-            <Avatar size='sm' />
-          </li>
-          <li>
-            <IconButton src='/icons/menu.svg' />
-          </li>
-        </Menus>
+        <Link href='/'>
+          <Logo>
+            <Image src='/icons/logo.svg' alt='로고' fill />
+          </Logo>
+        </Link>
       </nav>
     </Container>
   );
@@ -40,9 +33,4 @@ const Logo = styled.h1`
   width: 80px;
   height: 80px;
   position: relative;
-`;
-
-const Menus = styled.ul`
-  ${({ theme }) => theme.common.flexCenterColumn};
-  gap: 8px;
 `;
