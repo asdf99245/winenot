@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 import styled from 'styled-components';
+import ProductInfo from '@/components/ProductInfo';
 
 function Product() {
   const router = useRouter();
@@ -10,6 +11,7 @@ function Product() {
     <Container>
       <ProductSection>
         <Image src='/icons/wine-mock.png' alt='와인 이미지' width={280} height={500} />
+        <ProductInfo name='디아블로 레드' price={19900} />
       </ProductSection>
       <Description>
         레드 와인 하면 카베르네 소비뇽이 떠오를 정도로 높은 인지도를 자랑하는 품종입니다. 프랑스 보르도가 원산지로
@@ -25,15 +27,20 @@ function Product() {
 export default Product;
 
 const Container = styled.div`
-  ${({ theme }) => theme.common.flexSpaceBetween};
+  ${({ theme }) => theme.common.flexRow};
+  align-items: flex-start;
   padding: 0px 50px;
   margin-top: 40px;
+  width: 1200px;
 `;
 
 const ProductSection = styled.section`
   ${({ theme }) => theme.common.flexCenterColumn};
+  gap: 20px;
 `;
 
 const Description = styled.section`
-  height: 100%;
+  font-size: ${({ theme }) => theme.fontSize.sm};
+  padding: 20px;
+  line-height: 28px;
 `;
