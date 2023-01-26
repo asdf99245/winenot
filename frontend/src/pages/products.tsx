@@ -4,12 +4,12 @@ import Product from '@/components/Product';
 function products() {
   return (
     <Container>
-      <Product src='/icons/wine-mock.png' />
-      <Product src='/icons/wine-mock.png' />
-      <Product src='/icons/wine-mock.png' />
-      <Product src='/icons/wine-mock.png' />
-      <Product src='/icons/wine-mock.png' />
-      <Product src='/icons/wine-mock.png' />
+      <Product src='/icons/wine-mock.png' name='디아블로 레드' price={19900} />
+      <Product src='/icons/wine-mock.png' name='디아블로 레드' price={19900} />
+      <Product src='/icons/wine-mock.png' name='디아블로 레드' price={19900} />
+      <Product src='/icons/wine-mock.png' name='디아블로 레드' price={19900} />
+      <Product src='/icons/wine-mock.png' name='디아블로 레드' price={19900} />
+      <Product src='/icons/wine-mock.png' name='디아블로 레드' price={19900} />
     </Container>
   );
 }
