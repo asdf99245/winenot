@@ -21,8 +21,8 @@ const GlobalStyles = createGlobalStyle`
     }
 
     body {
-        background-color: ${({ theme }) => theme.colors.background1};
-        color: ${({ theme }) => theme.colors.text};
+        background-color: ${({ theme }) => theme.colors.purple2};
+        color: ${({ theme }) => theme.colors.white};
     }
 
     input, select, textarea, button {
