@@ -1,2 +1,14 @@
-# winenot
-bunnython project wine not
+# Wine not - Bunnython project
+
+와인을 찾는 소비자들이 어떤 와인을 살지 쉽게 결정할 수 있도록 도와주는 서비스.
+
+와인 취향을 고려해 와인메이트를 매칭해주는 차별화를 둔다.​
+
+## 기능
+
+- SNS OAuth 로그인
+- 와인 검색
+- 와인 정보 확인
+- 와인 리뷰 작성/확인
+- 와인 메이트 매칭
+- 채팅/화상채팅 제공
