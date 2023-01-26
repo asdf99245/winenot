@@ -1,13 +1,21 @@
+import { useEffect } from 'react';
 import styled from 'styled-components';
-import { useSession, signIn, signOut } from 'next-auth/react';
+import { useSession, signIn } from 'next-auth/react';
 import LoginButton from '@/components/common/LoginButton';
+import { useRouter } from 'next/router';
 
 function login() {
   const { data: session } = useSession();
+  const router = useRouter();
+
+  useEffect(() => {
+    if (session && router.isReady) {
+      if (session.user) router.push(`/profile/${session.user.name}`);
+    }
+  }, [session, router]);
 
   return (
     <Container>
-      {session && <span>로그인되어있음</span>}
       <LoginButton
         type='google'
         src='/icons/google.svg'
@@ -26,17 +34,4 @@ const Container = styled.div`
   ${({ theme }) => theme.common.flexCenterColumn};
   flex: 1;
   height: 100%;
-`;
-
-const GoogleLoginButton = styled.button`
-  ${({ theme }) => theme.common.flexCenter};
-  color: ${({ theme }) => theme.colors.black1};
-  font-weight: ${({ theme }) => theme.fontWeight.bold};
-  background-color: ${({ theme }) => theme.colors.gray3};
-  border: 1px solid ${({ theme }) => theme.colors.gray4};
-  border-radius: 8px;
-  padding: 8px 20px;
-  gap: 10px;
-  margin-top: 20px;
-  width: 400px;
 `;
