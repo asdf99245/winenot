@@ -2,6 +2,7 @@ import { DefaultTheme } from 'styled-components';
 
 export const colors = {
   primary: '#820000',
+  white: '#FFFFFF',
   text: '#2D2727',
   gray1: '#4F5660',
   gray2: '#D3D7DB',
@@ -16,6 +17,8 @@ export const colors = {
   black2: '#31313C',
   black3: '#1F2025',
   black4: '#313135',
+  purple1: '#6e2259',
+  purple2: '#655080',
 };
 
 const fontSize = {
