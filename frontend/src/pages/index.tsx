@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import Head from 'next/head';
 import { Searchbar } from '@/components/common';
 import Image from 'next/image';
 
