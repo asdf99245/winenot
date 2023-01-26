@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import styled from 'styled-components';
 import Avatar from '../common/Avatar';
 import IconButton from '../common/IconButton';
@@ -6,7 +7,9 @@ function Header() {
   return (
     <Container>
       <nav>
-        <h1>로고위치</h1>
+        <Logo>
+          <Image src='/icons/logo.svg' alt='로고' fill />
+        </Logo>
         <Menus>
           <li>
             <Avatar size='sm' />
@@ -31,6 +34,12 @@ const Container = styled.header`
     height: 100%;
     margin: 0 20px;
   }
+`;
+
+const Logo = styled.h1`
+  width: 80px;
+  height: 80px;
+  position: relative;
 `;
 
 const Menus = styled.ul`

@@ -19,6 +19,7 @@ export const colors = {
   black4: '#313135',
   purple1: '#6e2259',
   purple2: '#655080',
+  purple3: '#4d3869',
 };
 
 const fontSize = {
