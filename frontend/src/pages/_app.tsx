@@ -1,3 +1,4 @@
+import Layout from '@/components/Layout';
 import GlobalStyles from '@/styles/GlobalStyles';
 import theme from '@/styles/theme';
 import { notoSansKR } from '@/utils/fonts';
@@ -9,7 +10,9 @@ export default function App({ Component, pageProps }: AppProps) {
     <ThemeProvider theme={theme}>
       <GlobalStyles />
       <div className={notoSansKR.className}>
-        <Component {...pageProps} />
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
       </div>
     </ThemeProvider>
   );
